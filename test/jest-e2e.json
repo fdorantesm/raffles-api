@@ -1,0 +1,25 @@
+{
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "ts"
+  ],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "moduleNameMapper": {
+    "@thp/favorites/(.*)": "<rootDir>/../libs/favorites/src/$1",
+    "@thp/favorites": "<rootDir>/../libs/favorites/src",
+    "@thp/common/(.*)": "<rootDir>/../libs/common/src/$1",
+    "@thp/common": "<rootDir>/../libs/common/src",
+    "@thp/mongoose-hide-object-id/(.*)": "<rootDir>/../libs/mongoose-hide-object-id/src/$1",
+    "@thp/mongoose-hide-object-id": "<rootDir>/../libs/mongoose-hide-object-id/src",
+    "@plugins/mongoose-hide-object-id/(.*)": "<rootDir>/../libs/mongoose-hide-object-id/src/$1",
+    "@plugins/mongoose-hide-object-id": "<rootDir>/../libs/mongoose-hide-object-id/src",
+    "@thp/id-generator/(.*)": "<rootDir>/../libs/id-generator/src/$1",
+    "@thp/id-generator": "<rootDir>/../libs/id-generator/src"
+  }
+}

@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  healthy-backend:
+    container_name: healthy-backend
+    build:
+      context: ../..
+      dockerfile: docker/develop/Dockerfile
+    volumes:
+      - ../..:/src
+    env_file:
+      - ../../.env
+    ports:
+      - ${PORT}:${PORT}
