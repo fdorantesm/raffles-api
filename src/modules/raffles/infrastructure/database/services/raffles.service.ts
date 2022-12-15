@@ -18,6 +18,12 @@ export class RafflesService implements CrudRepository<RaffleEntity> {
     return this.rafflesRepository.find(filter);
   }
 
+  public findByUuids(
+    uuids: string[],
+  ): RaffleEntity[] | Promise<RaffleEntity[]> {
+    return this.rafflesRepository.findByUuids(uuids);
+  }
+
   public findOne(
     filter: Partial<RaffleEntity>,
   ): RaffleEntity | Promise<RaffleEntity> {

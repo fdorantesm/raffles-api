@@ -1,4 +1,3 @@
-import { ChallengeModule } from './../challenges/challenge.module';
 import { CqrsModule } from '@nestjs/cqrs';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { Module } from '@nestjs/common';
@@ -39,7 +38,6 @@ import { SharedModule } from '../shared/shared.module';
     SharedModule,
     UsersModule,
     IdGeneratorModule,
-    ChallengeModule,
   ],
   providers: [
     TokenService,

@@ -1,3 +1,3 @@
 export interface UseCase {
-  exec(...params: any[]): Promise<any>;
+  run(...params: any[]): Promise<any>;
 }

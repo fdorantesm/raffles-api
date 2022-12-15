@@ -1,5 +1,4 @@
 export enum Scope {
-  WORKOUTS = 'workouts',
-  MENU = 'menu',
+  RAFFLES = 'raffles',
   ROOT = 'root',
 }

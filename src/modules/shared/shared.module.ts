@@ -10,6 +10,7 @@ import { emailConfigLoader } from './../../core/infrastructure/config/loaders/em
 import { TemplateService } from './services/template.service';
 import { Titlelizer } from './services/titlelizer.service';
 import { UrlService } from './services/url.service';
+import { DateService } from './services/date.service';
 
 @Module({
   imports: [ConfigModule.forFeature(emailConfigLoader)],
@@ -22,6 +23,7 @@ import { UrlService } from './services/url.service';
     TemplateService,
     Titlelizer,
     UrlService,
+    DateService,
   ],
   exports: [
     S3Service,
@@ -32,6 +34,7 @@ import { UrlService } from './services/url.service';
     TemplateService,
     Titlelizer,
     UrlService,
+    DateService,
   ],
 })
 export class SharedModule {}

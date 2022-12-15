@@ -27,6 +27,19 @@ export class RafflesRepository implements CrudRepository<RaffleEntity> {
     }
   }
 
+  public async findByUuids(uuids: string[]): Promise<RaffleEntity[]> {
+    const raffles = await this.model
+      .find({
+        uuid: {
+          $in: uuids,
+        },
+      })
+      .exec();
+    if (raffles.length > 0) {
+      return raffles.map((raffle) => RaffleEntity.create(raffle));
+    }
+  }
+
   public async findOne(filter: Partial<RaffleEntity>): Promise<RaffleEntity> {
     const raffle = await this.model.findOne(filter).exec();
     if (raffle) {

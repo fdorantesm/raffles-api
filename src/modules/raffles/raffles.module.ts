@@ -8,6 +8,7 @@ import { AssignTicketUseCase } from './application/use-cases/assign-ticket/assig
 import { CancelRaffleUseCase } from './application/use-cases/cancel-raffle/cancel-raffle.use-case';
 import { CreatePrizeUseCase } from './application/use-cases/create-prize/create-prize.use-case';
 import { CreateRaffleUseCase } from './application/use-cases/create-raffle/create-raffle.use-case';
+import { CommandHandlers } from './domain/commands';
 import { EventHandlers } from './domain/events';
 import { PrizeInstance } from './infrastructure/database/models/prize.model';
 import { RaffleInstance } from './infrastructure/database/models/raffle.model';
@@ -30,6 +31,7 @@ import { RafflesController } from './infrastructure/http/controllers/raffles.con
   ],
   providers: [
     ...EventHandlers,
+    ...CommandHandlers,
     RafflesRepository,
     PrizesRepository,
     TicketsRepository,

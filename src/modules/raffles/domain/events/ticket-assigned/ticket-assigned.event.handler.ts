@@ -11,5 +11,6 @@ export class TicketAssignedEventHandler
       `${ticket.uuid} assigned to ${ticket.participantId}`,
       TicketAssignedEventHandler.name,
     );
+    // TODO: Email ticket
   }
 }
