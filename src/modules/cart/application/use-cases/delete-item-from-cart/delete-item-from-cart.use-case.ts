@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { UseCase } from 'libs/domain/src';
 import { CartEntity } from 'src/modules/cart/domain/entities/cart.entity';
-import { ShoppingCart } from 'src/modules/cart/domain/shoppingcart';
+import { ShoppingCart } from 'src/modules/cart/domain/shoppingcart/shoppingcart';
 import { CartService } from 'src/modules/cart/infrastructure/database/services/cart.service';
 
 @Injectable()
