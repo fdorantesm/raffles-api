@@ -24,4 +24,8 @@ export class CartService {
   public delete(uuid: string): Promise<boolean> {
     return this.cartRepository.delete(uuid);
   }
+
+  public reset(uuid: string): Promise<CartEntity> {
+    return this.cartRepository.reset(uuid);
+  }
 }

@@ -36,4 +36,9 @@ export class CartRepository {
     const q = await this.model.deleteOne({ uuid }).exec();
     return q.deletedCount > 0;
   }
+
+  public async reset(uuid: string): Promise<CartEntity> {
+    await this.update(uuid, []);
+    return this.findOne(uuid);
+  }
 }
