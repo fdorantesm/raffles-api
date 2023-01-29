@@ -3,6 +3,7 @@ import { Json } from '@thp/common';
 import { DeleteItemFromCartUseCase } from 'src/modules/cart/application/use-cases/delete-item-from-cart/delete-item-from-cart.use-case';
 import { AddItemsToCartUseCase } from '../../../application/use-cases/add-item-to-cart/add-item-to-cart.use-case';
 import { GetCartUseCase } from '../../../application/use-cases/get-cart/get-cart.use-case';
+import { ResetCartUseCase } from 'src/modules/cart/application/use-cases/reset-cart/reset-cart.use-case';
 
 @Controller({
   version: '1',
@@ -13,6 +14,7 @@ export class CartController {
     private readonly getCartUseCase: GetCartUseCase,
     private readonly addItemsToCartUseCase: AddItemsToCartUseCase,
     private readonly deleteItemFromCartUseCase: DeleteItemFromCartUseCase,
+    private readonly resetCartUseCase: ResetCartUseCase,
   ) {}
 
   @Get('/:uuid')
@@ -31,5 +33,10 @@ export class CartController {
     @Param('itemId') itemId: string,
   ) {
     return this.deleteItemFromCartUseCase.run(uuid, itemId);
+  }
+
+  @Delete('/:uuid/items')
+  public reset(@Param('uuid') uuid: string) {
+    return this.resetCartUseCase.run(uuid);
   }
 }

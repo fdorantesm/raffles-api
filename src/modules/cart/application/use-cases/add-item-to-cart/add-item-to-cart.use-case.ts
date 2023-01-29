@@ -2,7 +2,7 @@ import { Inject, Injectable } from '@nestjs/common';
 import { UseCase } from 'libs/domain/src';
 import { Json } from 'src/core/domain/json';
 import { CartEntity } from 'src/modules/cart/domain/entities/cart.entity';
-import { ShoppingCart } from 'src/modules/cart/domain/shoppingcart';
+import { ShoppingCart } from 'src/modules/cart/domain/shoppingcart/shoppingcart';
 import { CartService } from 'src/modules/cart/infrastructure/database/services/cart.service';
 import { ShortIdService } from 'src/modules/shared/services/short-id.service';
 import { GetCartUseCase } from '../get-cart/get-cart.use-case';

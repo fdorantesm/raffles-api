@@ -11,6 +11,7 @@ import { CartController } from './infrastructure/http/controllers/cart.controlle
 import { CartInstance } from './infrastructure/database/models/cart.model';
 import { CartRepository } from './infrastructure/database/repositories/cart.repository';
 import { CartService } from './infrastructure/database/services/cart.service';
+import { ResetCartUseCase } from './application/use-cases/reset-cart/reset-cart.use-case';
 
 @Module({
   imports: [
@@ -25,6 +26,7 @@ import { CartService } from './infrastructure/database/services/cart.service';
     GetCartUseCase,
     AddItemsToCartUseCase,
     DeleteItemFromCartUseCase,
+    ResetCartUseCase,
   ],
   controllers: [CartController],
 })
