@@ -18,36 +18,18 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "paths": {
-      "@thp/favorites": [
-        "libs/favorites/src"
-      ],
-      "@thp/favorites/*": [
-        "libs/favorites/src/*"
-      ],
-      "@thp/common": [
-        "libs/common/src"
-      ],
-      "@thp/common/*": [
-        "libs/common/src/*"
-      ],
-      "@thp/mongoose-hide-object-id": [
-        "libs/mongoose-hide-object-id/src"
-      ],
-      "@thp/mongoose-hide-object-id/*": [
-        "libs/mongoose-hide-object-id/src/*"
-      ],
-      "@plugins/mongoose-hide-object-id": [
-        "libs/mongoose-hide-object-id/src"
-      ],
+      "@thp/favorites": ["libs/favorites/src"],
+      "@thp/favorites/*": ["libs/favorites/src/*"],
+      "@thp/common": ["libs/common/src"],
+      "@thp/common/*": ["libs/common/src/*"],
+      "@thp/mongoose-hide-object-id": ["libs/mongoose-hide-object-id/src"],
+      "@thp/mongoose-hide-object-id/*": ["libs/mongoose-hide-object-id/src/*"],
+      "@plugins/mongoose-hide-object-id": ["libs/mongoose-hide-object-id/src"],
       "@plugins/mongoose-hide-object-id/*": [
         "libs/mongoose-hide-object-id/src/*"
       ],
-      "@thp/id-generator": [
-        "libs/id-generator/src"
-      ],
-      "@thp/id-generator/*": [
-        "libs/id-generator/src/*"
-      ]
+      "@thp/id-generator": ["libs/id-generator/src"],
+      "@thp/id-generator/*": ["libs/id-generator/src/*"]
     }
   }
 }
